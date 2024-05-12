@@ -13,6 +13,6 @@ class SumberController extends Controller
             orderBy('id', 'desc')
             ->paginate(5);
 
-        return view('pages.sumber.index', compact('sumbers'));
+        return view('pages.sumber-pengeluaran.index', compact('sumbers'));
     }
 }

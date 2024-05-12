@@ -3,6 +3,10 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\PengeluaranController;
 use App\Http\Controllers\SumberController;
+use App\Http\Controllers\JenisProdukController;
+use App\Http\Controllers\ProdukController;
+use App\Http\Controllers\PenjualanController;
+use App\Http\Controllers\ReturController;
 
 Route::get('/', function () {
     return view('pages.auth.auth-login');
@@ -15,5 +19,9 @@ Route::middleware(['auth:sanctum', config('jetstream.auth_session'),  'verified'
     })->name('home');
     Route::resource('sumber', SumberController::class);
     Route::resource('pengeluaran', PengeluaranController::class);
+    Route::resource('jenis-produk', JenisProdukController::class);
+    Route::resource('produk', ProdukController::class);
+    Route::resource('penjualan', PenjualanController::class);
+    Route::resource('retur', ReturController::class);
 });
 

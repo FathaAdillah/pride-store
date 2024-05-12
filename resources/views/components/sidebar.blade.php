@@ -34,11 +34,11 @@
                 <ul class="dropdown-menu">
                     <li class="{{ Request::is('layout-default-layout') ? 'active' : '' }}">
                         <a class="nav-link"
-                            href="{{ url('layout-default-layout') }}">Penjualan</a>
+                            href="{{ Route('penjualan.index') }}">Penjualan</a>
                     </li>
                     <li class="{{ Request::is('transparent-sidebar') ? 'active' : '' }}">
                         <a class="nav-link"
-                            href="{{ url('transparent-sidebar') }}">Retur</a>
+                            href="{{ Route('retur.index') }}">Retur</a>
                     </li>
                     <li class="{{ Request::is('transparent-sidebar') ? 'active' : '' }}">
                         <a class="nav-link"
@@ -53,11 +53,11 @@
                 <ul class="dropdown-menu">
                     <li class="{{ Request::is('layout-default-layout') ? 'active' : '' }}">
                         <a class="nav-link"
-                            href="{{ url('layout-default-layout') }}">Jenis Produk</a>
+                            href="{{ Route('jenis-produk.index') }}">Jenis Produk</a>
                     </li>
                     <li class="{{ Request::is('transparent-sidebar') ? 'active' : '' }}">
                         <a class="nav-link"
-                            href="{{ url('transparent-sidebar') }}">Produk</a>
+                            href="{{ Route('produk.index') }}">Produk</a>
                     </li>
                 </ul>
             </li>
