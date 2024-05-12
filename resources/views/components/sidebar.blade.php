@@ -19,11 +19,11 @@
                 <ul class="dropdown-menu">
                     <li class="{{ Request::is('layout-default-layout') ? 'active' : '' }}">
                         <a class="nav-link"
-                            href="{{ url('layout-default-layout') }}">Sumber Pengeluaran</a>
+                            href="{{ Route ('sumber.index') }}">Sumber Pengeluaran</a>
                     </li>
                     <li class="{{ Request::is('transparent-sidebar') ? 'active' : '' }}">
                         <a class="nav-link"
-                            href="{{ url('transparent-sidebar') }}">Pengeluaran</a>
+                            href="{{ Route('pengeluaran.index') }}">Pengeluaran</a>
                     </li>
                 </ul>
             </li>
