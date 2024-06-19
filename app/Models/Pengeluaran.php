@@ -12,16 +12,17 @@ class Pengeluaran extends Model
     use HasFactory;
     protected $table = 'pengeluarans';
     protected $fillable = [
-        'id_sumber',
+        'id_sumbers',
         'nominal',
         'jumlah',
         'tanggal',
-        'id_jenis_produk',
+        'keterangan',
+        'id_produk',
     ];
 
     public function sumber()
     {
-        return $this->belongsTo(Sumber::class, 'id_sumber', 'id');
+        return $this->belongsTo(Sumber::class, 'id_sumbers', 'id');
     }
     public function jenis_produk()
     {

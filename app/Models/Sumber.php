@@ -9,7 +9,8 @@ class Sumber extends Model
 {
     use HasFactory;
     protected $table = 'sumbers';
+
     protected $fillable = [
-        'sumber'
+        'name',
     ];
 }

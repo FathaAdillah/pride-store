@@ -4,10 +4,8 @@
 
 @push('style')
     <!-- CSS Libraries -->
-    <link rel="stylesheet"
-        href="{{ asset('library/jqvmap/dist/jqvmap.min.css') }}">
-    <link rel="stylesheet"
-        href="{{ asset('library/summernote/dist/summernote-bs4.min.css') }}">
+    <link rel="stylesheet" href="{{ asset('library/jqvmap/dist/jqvmap.min.css') }}">
+    <link rel="stylesheet" href="{{ asset('library/summernote/dist/summernote-bs4.min.css') }}">
 @endpush
 
 @section('main')
@@ -24,10 +22,10 @@
                         </div>
                         <div class="card-wrap">
                             <div class="card-header">
-                                <h4>Total Pendapatan Kotor</h4>
+                                <h4>Pendapatan Kotor</h4>
                             </div>
                             <div class="card-body">
-                                10
+                                Rp. 1.299.000
                             </div>
                         </div>
                     </div>
@@ -39,10 +37,10 @@
                         </div>
                         <div class="card-wrap">
                             <div class="card-header">
-                                <h4>Total Pendapatan Bersih</h4>
+                                <h4>Pendapatan Bersih</h4>
                             </div>
                             <div class="card-body">
-                                42
+                                Rp. 10.000.000
                             </div>
                         </div>
                     </div>
@@ -57,7 +55,7 @@
                                 <h4>Total Pengeluaran</h4>
                             </div>
                             <div class="card-body">
-                                1,201
+                                Rp. 1.000.000
                             </div>
                         </div>
                     </div>
@@ -84,12 +82,17 @@
                         <div class="card-header">
                             <h4>Jumlah Pendapatan Per-Bulan</h4>
                             <div class="card-header-action">
-                                {{-- <div>list Tahun</div> --}}
+                                <div class="form-group">
+                                    <select class="form-control">
+                                        <option value="">Pilih Tahun</option>
+                                        <option value="">2024</option>
+                                        <option value="">2025</option>
+                                    </select>
+                                </div>
                             </div>
                         </div>
                         <div class="card-body">
-                            <canvas id="myChart"
-                                height="182"></canvas>
+                            <canvas id="myChart" height="182"></canvas>
                             <div class="statistic-details mt-sm-4">
                             </div>
                         </div>
@@ -98,13 +101,18 @@
                 <div class="col-lg-4 col-md-12 col-12 col-sm-12">
                     <div class="card">
                         <div class="card-header">
-                            <h4>Total Jumlah Penjualan Thrift Per-Bulan</h4>
+                            <h4>Jumlah Penjualan Th ift Per-Bulan</h4>
+                            <div class="form-group">
+                                <select class="form-control">
+                                    <option value="">Pilih Tahun</option>
+                                    <option value="">2024</option>
+                                    <option value="">2025</option>
+                                </select>
+                            </div>
                         </div>
-                        {{-- <div>List Tahun</div> --}}
                         <div class="card-body">
                             <div class="pt-1 pb-1 text-center">
-                                <a href="#"
-                                    class="btn btn-primary btn-lg btn-round">
+                                <a href="#" class="btn btn-primary btn-lg btn-round">
                                     View All
                                 </a>
                             </div>
@@ -203,7 +211,7 @@
                 <div class="col-12 col-md-4 col-lg-4">
                     <div class="card">
                         <div class="card-header d-flex justify-content-between align-items-center">
-                            <h4>Stock Barang</h4>
+                            <h4>Stock Barang Ready</h4>
                             <div>
                                 <a class="btn btn-primary btn-sm mr-2" href="#">See all</a>
                                 <a class="btn btn-primary btn-sm" href="#">Print</a>

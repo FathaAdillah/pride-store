@@ -4,12 +4,12 @@
             <a href="index.html">Thrift Pride Store</a>
         </div>
         <div class="sidebar-brand sidebar-brand-sm">
-            <a href="index.html">St</a>
+            <a href="index.html">TPS</a>
         </div>
         <ul class="sidebar-menu">
             <li class="">
                 <a class="nav-link"
-                    href=""><i class="fas fa-fire"></i> <span>Dashboard</span></a>
+                    href="{{ Route('home') }}"><i class="fas fa-fire"></i> <span>Dashboard</span></a>
             </li>
             <li class="menu-header">Activity</li>
             <li class="nav-item dropdown">
@@ -42,7 +42,7 @@
                     </li>
                     <li class="{{ Request::is('transparent-sidebar') ? 'active' : '' }}">
                         <a class="nav-link"
-                            href="{{ url('transparent-sidebar') }}">Hutang</a>
+                            href="{{ Route('hutang.index')}}">Hutang</a>
                     </li>
                 </ul>
             </li>

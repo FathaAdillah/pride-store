@@ -1,6 +1,6 @@
 @extends('layouts.app')
 
-@section('title', 'Sumber Pengeluaran')
+@section('title', 'Pengeluaran')
 
 @push('style')
     <!-- CSS Libraries -->
@@ -13,7 +13,7 @@
             <div class="section-header">
                 <h1>Pengeluaran</h1>
                 <div class="section-header-button">
-                    <a href="" class="btn btn-primary">Add New</a>
+                    <a href="{{ Route('pengeluaran.create') }}" class="btn btn-primary">Add New</a>
                 </div>
                 <div class="section-header-breadcrumb">
                     <div class="breadcrumb-item active"><a href="#">Dashboard</a></div>
@@ -68,7 +68,7 @@
                                                     {{ $pengeluaran->id }}
                                                 </td>
                                                 <td>
-                                                    {{ $pengeluaran->sumber->sumber}}
+                                                    {{ $pengeluaran->sumber->name}}
                                                 </td>
                                                 <td>
                                                     {{ $pengeluaran->keterangan }}
@@ -84,12 +84,12 @@
                                                 </td>
                                                 <td>
                                                     <div class="d-flex justify-content-center">
-                                                        <a href=''
+                                                        <a href='{{ Route("pengeluaran.edit", $pengeluaran->id) }}'
                                                             class="btn btn-sm btn-info btn-icon">
                                                             <i class="fas fa-edit"></i>
                                                             Edit
                                                         </a>
-                                                        <form action=""
+                                                        <form action="{{ Route('pengeluaran.destroy', $pengeluaran->id) }}"
                                                             method="POST" class="ml-2">
                                                             <input type="hidden" name="_method" value="DELETE" />
                                                             <input type="hidden" name="_token"

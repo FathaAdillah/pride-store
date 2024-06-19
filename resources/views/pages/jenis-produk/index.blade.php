@@ -1,6 +1,6 @@
 @extends('layouts.app')
 
-@section('title', 'Sumber Pengeluaran')
+@section('title', 'Jenis Produk')
 
 @push('style')
     <!-- CSS Libraries -->
@@ -13,7 +13,7 @@
             <div class="section-header">
                 <h1>Jenis Produk</h1>
                 <div class="section-header-button">
-                    <a href="" class="btn btn-primary">Add New</a>
+                    <a href="{{ Route('jenis-produk.create') }}" class="btn btn-primary">Add New</a>
                 </div>
                 <div class="section-header-breadcrumb">
                     <div class="breadcrumb-item active"><a href="#">Dashboard</a></div>

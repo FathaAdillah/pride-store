@@ -13,7 +13,7 @@
             <div class="section-header">
                 <h1>Sumber Pengeluaran</h1>
                 <div class="section-header-button">
-                    <a href="" class="btn btn-primary">Add New</a>
+                    <a href="{{ Route('sumber.create') }}" class="btn btn-primary">Add New</a>
                 </div>
                 <div class="section-header-breadcrumb">
                     <div class="breadcrumb-item active"><a href="#">Dashboard</a></div>
@@ -54,22 +54,21 @@
                                 <div class="table-responsive">
                                     <table class="table-striped table">
                                         <tr>
-
                                             <th>Name</th>
                                             <th>Action</th>
                                         </tr>
                                         @foreach ($sumbers as $sumber)
                                             <tr>
-                                                <td>{{ $sumber->sumber }}
+                                                <td>{{ $sumber->name }}
                                                 </td>
                                                 <td>
                                                     <div class="d-flex justify-content-center">
-                                                        <a href=''
+                                                        <a href='{{ Route('sumber.edit', $sumber->id) }}'
                                                             class="btn btn-sm btn-info btn-icon">
                                                             <i class="fas fa-edit"></i>
                                                             Edit
                                                         </a>
-                                                        <form action=""
+                                                        <form action="{{ Route('sumber.destroy', $sumber->id) }}"
                                                             method="POST" class="ml-2">
                                                             <input type="hidden" name="_method" value="DELETE" />
                                                             <input type="hidden" name="_token"
